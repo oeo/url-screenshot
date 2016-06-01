@@ -1,7 +1,7 @@
 {
   "name": "url-screenshot",
   "description": "simple phantom wrapper to take screenshots of urls",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "main": "./module.js",
   "author": "douglas lauer <taky@taky.com>",
   "repository": "douglauer/url-screenshot",
