@@ -26,6 +26,13 @@ page.viewportSize = {
   height: 600
 };
 
+page.clipRect = {
+  top: 0,
+  left: 0,
+  width: 800,
+  height: 600
+};
+
 page.settings.userAgent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36';
 
 var 
