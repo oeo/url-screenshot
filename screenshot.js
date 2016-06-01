@@ -15,6 +15,12 @@ if(system.args.length != 3){
 
 var page = require('webpage').create();
 
+page.onError = (function(){});
+page.onConsoleMessage = (function(){});
+page.onAlert = (function(){});
+page.onConfirm = (function(){return(true);});
+page.onPrompt = (function(){return("hi");});
+
 page.viewportSize = {
   width: 800,
   height: 600
