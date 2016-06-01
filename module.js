@@ -104,7 +104,7 @@
         try {
           response = JSON.parse(stdout.trim());
         } catch (_error) {
-          return cb(new Error('Failed to decode response'));
+          return cb(new Error('Failed to decode response: ' + stdout.trim()));
         }
         if (response.error) {
           return cb(new Error(response.error));
