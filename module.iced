@@ -30,7 +30,7 @@ module.exports = screenshot = ((opt,cb) ->
   try
     response = JSON.parse stdout.trim()
   catch
-    return cb new Error 'Failed to decode response'
+    return cb new Error 'Failed to decode response: ' + stdout.trim()
 
   if response.error then return cb new Error(response.error)
  
