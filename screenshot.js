@@ -1,4 +1,4 @@
-var 
+var
   log = function(x){console.log(x)},
   system = require('system'),
   finish = (function(obj){
@@ -21,21 +21,23 @@ page.onAlert = (function(){});
 page.onConfirm = (function(){return(true);});
 page.onPrompt = (function(){return("hi");});
 
+var res = '1024x768';
+
 page.viewportSize = {
-  width: 800,
-  height: 600
+  width: res.split('x').shift(),
+  height: res.split('x').pop(),
 };
 
 page.clipRect = {
   top: 0,
   left: 0,
-  width: 800,
-  height: 600
+  width: res.split('x').shift(),
+  height:res.split('x').pop(),
 };
 
 page.settings.userAgent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36';
 
-var 
+var
   url = system.args[1],
   outfile = system.args[2]
   ;

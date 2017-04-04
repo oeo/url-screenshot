@@ -17,7 +17,7 @@ module.exports = screenshot = ((opt,cb) ->
 
   opt.outfile ?= "/tmp/#{_.uuid}.png"
   opt.outfile = _.resolve opt.outfile
-  
+
   child_args = [
     path.join(__dirname,'screenshot.js')
     opt.url
@@ -33,7 +33,7 @@ module.exports = screenshot = ((opt,cb) ->
     return cb new Error 'Failed to decode response: ' + stdout.trim()
 
   if response.error then return cb new Error(response.error)
- 
+
   cb null, response.outfile
 )
 
